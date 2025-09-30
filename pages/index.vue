@@ -12,11 +12,11 @@
     <!-- Portfolio Section -->
     <PortfolioSection />
     
-    <!-- About Section -->
-    <AboutSection />
-    
     <!-- Steps Section -->
     <StepsSection />
+    
+    <!-- About Section -->
+    <AboutSection />
     
     <!-- Contact Section -->
     <ContactSection />

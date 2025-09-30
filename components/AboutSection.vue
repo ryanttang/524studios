@@ -85,25 +85,6 @@
                 </p>
               </div>
               
-              <!-- Stats -->
-              <div class="grid grid-cols-2 gap-4">
-                <div class="text-center">
-                  <div class="text-3xl font-bold mb-1">50+</div>
-                  <div class="text-primary-100 text-sm">Projects</div>
-                </div>
-                <div class="text-center">
-                  <div class="text-3xl font-bold mb-1">100%</div>
-                  <div class="text-primary-100 text-sm">Satisfaction</div>
-                </div>
-                <div class="text-center">
-                  <div class="text-3xl font-bold mb-1">5+</div>
-                  <div class="text-primary-100 text-sm">Years</div>
-                </div>
-                <div class="text-center">
-                  <div class="text-3xl font-bold mb-1">24/7</div>
-                  <div class="text-primary-100 text-sm">Support</div>
-                </div>
-              </div>
             </div>
             
             <!-- Floating Elements -->
