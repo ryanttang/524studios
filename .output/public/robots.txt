@@ -1,0 +1,10 @@
+# START nuxt-robots (indexable)
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+Sitemap: https://fivetwentyfourstudios.com/sitemap.xml
+# END nuxt-robots

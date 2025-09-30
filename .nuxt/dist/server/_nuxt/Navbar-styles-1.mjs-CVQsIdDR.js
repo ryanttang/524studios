@@ -1,0 +1,5 @@
+const Navbar_vue_vue_type_style_index_0_scoped_ef9ef370_lang = ".nav-link[data-v-ef9ef370]{color:rgb(209 213 219/var(--tw-text-opacity,1));font-size:.875rem;font-weight:500;line-height:1.25rem;padding:.5rem .75rem;transition-duration:.2s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.nav-link[data-v-ef9ef370],.nav-link[data-v-ef9ef370]:hover{--tw-text-opacity:1}.nav-link[data-v-ef9ef370]:hover{color:rgb(56 189 248/var(--tw-text-opacity,1))}.mobile-nav-link[data-v-ef9ef370]{display:block;font-size:1rem;font-weight:500;line-height:1.5rem;padding:.5rem .75rem;--tw-text-opacity:1;color:rgb(209 213 219/var(--tw-text-opacity,1));transition-duration:.2s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.mobile-nav-link[data-v-ef9ef370]:hover{--tw-text-opacity:1;color:rgb(56 189 248/var(--tw-text-opacity,1))}";
+export {
+  Navbar_vue_vue_type_style_index_0_scoped_ef9ef370_lang as default
+};
+//# sourceMappingURL=Navbar-styles-1.mjs-CVQsIdDR.js.map

@@ -43,6 +43,32 @@ export default defineNuxtConfig({
       lg: 1024,
       xl: 1280,
       xxl: 1536
+    },
+    // Disable IPX for static generation to avoid prerender errors
+    ipx: {
+      maxAge: 60 * 60 * 24 * 7 // 7 days
+    }
+  },
+  nitro: {
+    // Optimize for static generation
+    prerender: {
+      crawlLinks: false,
+      ignore: ['/_ipx/**']
+    }
+  },
+  vite: {
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'gsap': ['gsap'],
+            'three': ['three'],
+            'headlessui': ['@headlessui/vue'],
+            'heroicons': ['@heroicons/vue']
+          }
+        }
+      },
+      chunkSizeWarningLimit: 1000
     }
   },
   app: {
