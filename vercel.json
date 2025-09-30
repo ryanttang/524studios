@@ -1,12 +1,7 @@
 {
-  "buildCommand": "npm run generate",
+  "buildCommand": "npm run build",
   "outputDirectory": ".output/public",
   "framework": "nuxtjs",
-  "functions": {
-    ".output/server/index.mjs": {
-      "maxDuration": 30
-    }
-  },
   "headers": [
     {
       "source": "/(.*)",
