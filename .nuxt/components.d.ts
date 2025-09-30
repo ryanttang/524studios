@@ -21,6 +21,7 @@ export const HeroSection: typeof import("../components/HeroSection.vue")['defaul
 export const Navbar: typeof import("../components/Navbar.vue")['default']
 export const PortfolioSection: typeof import("../components/PortfolioSection.vue")['default']
 export const ServicesSection: typeof import("../components/ServicesSection.vue")['default']
+export const StepsSection: typeof import("../components/StepsSection.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
 export const NuxtErrorBoundary: typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -52,6 +53,7 @@ export const LazyHeroSection: LazyComponent<typeof import("../components/HeroSec
 export const LazyNavbar: LazyComponent<typeof import("../components/Navbar.vue")['default']>
 export const LazyPortfolioSection: LazyComponent<typeof import("../components/PortfolioSection.vue")['default']>
 export const LazyServicesSection: LazyComponent<typeof import("../components/ServicesSection.vue")['default']>
+export const LazyStepsSection: LazyComponent<typeof import("../components/StepsSection.vue")['default']>
 export const LazyNuxtWelcome: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
 export const LazyNuxtLayout: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
 export const LazyNuxtErrorBoundary: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>

@@ -58,25 +58,25 @@
         
         <!-- Service Cards -->
         <div ref="heroStats" class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-          <div class="bg-gradient-to-br from-blue-500/20 to-purple-600/20 backdrop-blur-md border border-blue-400/30 rounded-xl p-6 text-center transition-all duration-300 hover:from-blue-400/30 hover:to-purple-500/30 hover:border-blue-300/50 hover:shadow-lg hover:shadow-blue-500/25">
-            <div class="w-12 h-12 bg-gradient-to-br from-blue-400/30 to-purple-500/30 rounded-lg flex items-center justify-center mx-auto mb-3">
+          <div class="bg-gradient-to-br from-blue-500/20 via-purple-500/15 to-indigo-600/20 backdrop-blur-md border border-blue-400/30 rounded-xl p-6 text-center transition-all duration-300 hover:from-blue-400/30 hover:via-purple-400/25 hover:to-indigo-500/30 hover:border-blue-300/50 hover:shadow-lg hover:shadow-blue-500/25">
+            <div class="w-12 h-12 bg-gradient-to-br from-blue-400/30 via-purple-400/25 to-indigo-500/30 rounded-lg flex items-center justify-center mx-auto mb-3">
               <svg class="w-6 h-6 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
               </svg>
             </div>
             <h3 class="text-lg font-semibold text-white font-display">Web Design</h3>
           </div>
-          <div class="bg-gradient-to-br from-green-500/20 to-teal-600/20 backdrop-blur-md border border-green-400/30 rounded-xl p-6 text-center transition-all duration-300 hover:from-green-400/30 hover:to-teal-500/30 hover:border-green-300/50 hover:shadow-lg hover:shadow-green-500/25">
-            <div class="w-12 h-12 bg-gradient-to-br from-green-400/30 to-teal-500/30 rounded-lg flex items-center justify-center mx-auto mb-3">
-              <svg class="w-6 h-6 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="bg-gradient-to-br from-emerald-500/20 via-teal-500/15 to-cyan-600/20 backdrop-blur-md border border-emerald-400/30 rounded-xl p-6 text-center transition-all duration-300 hover:from-emerald-400/30 hover:via-teal-400/25 hover:to-cyan-500/30 hover:border-emerald-300/50 hover:shadow-lg hover:shadow-emerald-500/25">
+            <div class="w-12 h-12 bg-gradient-to-br from-emerald-400/30 via-teal-400/25 to-cyan-500/30 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
               </svg>
             </div>
             <h3 class="text-lg font-semibold text-white font-display">Marketing Support</h3>
           </div>
-          <div class="bg-gradient-to-br from-orange-500/20 to-red-600/20 backdrop-blur-md border border-orange-400/30 rounded-xl p-6 text-center transition-all duration-300 hover:from-orange-400/30 hover:to-red-500/30 hover:border-orange-300/50 hover:shadow-lg hover:shadow-orange-500/25">
-            <div class="w-12 h-12 bg-gradient-to-br from-orange-400/30 to-red-500/30 rounded-lg flex items-center justify-center mx-auto mb-3">
-              <svg class="w-6 h-6 text-orange-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="bg-gradient-to-br from-rose-500/20 via-pink-500/15 to-orange-600/20 backdrop-blur-md border border-rose-400/30 rounded-xl p-6 text-center transition-all duration-300 hover:from-rose-400/30 hover:via-pink-400/25 hover:to-orange-500/30 hover:border-rose-300/50 hover:shadow-lg hover:shadow-rose-500/25">
+            <div class="w-12 h-12 bg-gradient-to-br from-rose-400/30 via-pink-400/25 to-orange-500/30 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-rose-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
               </svg>
             </div>

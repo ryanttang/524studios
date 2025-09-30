@@ -15,6 +15,9 @@
     <!-- About Section -->
     <AboutSection />
     
+    <!-- Steps Section -->
+    <StepsSection />
+    
     <!-- Contact Section -->
     <ContactSection />
     
@@ -25,6 +28,7 @@
 
 <script setup>
 import { onMounted } from 'vue'
+import StepsSection from '~/components/StepsSection.vue'
 
 onMounted(async () => {
   if (process.client) {

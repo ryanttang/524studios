@@ -15,11 +15,11 @@
       <!-- Section Header -->
       <div class="text-center mb-16 animate-on-scroll">
         <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 font-display">
-          Our <span class="text-primary-400">Portfolio</span>
+          The Work We Do for <span class="text-primary-400">You</span>
         </h2>
         <p class="text-xl text-gray-300 max-w-3xl mx-auto font-body">
-          Explore our recent projects and see how we've helped businesses transform 
-          their online presence with modern, effective web solutions.
+          We specialize in supporting your business with custom web solutions that drive growth, 
+          enhance user experience, and deliver measurable results.
         </p>
       </div>
       
@@ -29,12 +29,7 @@
           v-for="category in categories" 
           :key="category"
           @click="activeCategory = category"
-          :class="[
-            'px-6 py-3 rounded-full font-medium transition-all duration-200',
-            activeCategory === category 
-              ? 'bg-primary-500 text-white' 
-              : 'bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 text-gray-300 hover:from-white/15 hover:to-white/10'
-          ]"
+          :class="getButtonClasses(category)"
         >
           {{ category }}
         </button>
@@ -50,15 +45,13 @@
           <div class="relative overflow-hidden bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl shadow-black/20 transition-all duration-300 hover:from-white/15 hover:to-white/10 hover:border-white/30 hover:shadow-2xl hover:shadow-black/30">
             <!-- Project Image -->
             <div class="aspect-w-16 aspect-h-12 bg-gradient-to-br from-primary-500/20 to-primary-600/20">
-              <div class="w-full h-64 bg-gradient-to-br from-primary-500/20 to-primary-600/20 flex items-center justify-center">
-                <div class="text-center">
-                  <div class="w-16 h-16 bg-primary-500 rounded-xl mx-auto mb-4 flex items-center justify-center">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
-                    </svg>
-                  </div>
-                  <p class="text-primary-400 font-medium">{{ project.name }}</p>
-                </div>
+              <div class="w-full h-64 relative overflow-hidden">
+                <img 
+                  :src="project.image" 
+                  :alt="project.name" 
+                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300"></div>
               </div>
             </div>
             
@@ -122,42 +115,48 @@ const projects = [
     name: 'Modern Tech Startup',
     description: 'A sleek, modern website for a tech startup with focus on user experience and conversion optimization.',
     category: 'Web Design',
-    technologies: ['React', 'Tailwind CSS', 'GSAP']
+    technologies: ['React', 'Tailwind CSS', 'GSAP'],
+    image: new URL('../assets/images/work/tech.jpg', import.meta.url).href
   },
   {
     id: 2,
     name: 'Fashion E-commerce',
     description: 'Complete e-commerce solution with custom design, payment integration, and inventory management.',
     category: 'E-commerce',
-    technologies: ['Vue.js', 'Nuxt', 'Stripe']
+    technologies: ['Vue.js', 'Nuxt', 'Stripe'],
+    image: new URL('../assets/images/work/fashion.jpg', import.meta.url).href
   },
   {
     id: 3,
     name: 'Restaurant Branding',
     description: 'Complete brand identity and website design for a high-end restaurant chain.',
     category: 'Branding',
-    technologies: ['Branding', 'Web Design', 'Photography']
+    technologies: ['Branding', 'Web Design', 'Photography'],
+    image: new URL('../assets/images/work/restaurant.jpg', import.meta.url).href
   },
   {
     id: 4,
     name: 'SaaS Dashboard',
     description: 'Complex dashboard application with real-time data visualization and user management.',
     category: 'Development',
-    technologies: ['React', 'Node.js', 'MongoDB']
+    technologies: ['React', 'Node.js', 'MongoDB'],
+    image: new URL('../assets/images/work/data.jpg', import.meta.url).href
   },
   {
     id: 5,
     name: 'Creative Agency',
     description: 'Portfolio website for a creative agency with interactive animations and modern design.',
     category: 'Web Design',
-    technologies: ['GSAP', 'Three.js', 'WebGL']
+    technologies: ['GSAP', 'Three.js', 'WebGL'],
+    image: new URL('../assets/images/work/creative.jpg', import.meta.url).href
   },
   {
     id: 6,
-    name: 'Online Learning Platform',
-    description: 'Educational platform with course management, video streaming, and student progress tracking.',
+    name: 'Booking Platform',
+    description: 'Comprehensive scheduling platform for service providers with appointment management, client tracking, and automated reminders.',
     category: 'Development',
-    technologies: ['Vue.js', 'Firebase', 'Video.js']
+    technologies: ['Vue.js', 'Firebase', 'Calendar API'],
+    image: new URL('../assets/images/work/booking.jpg', import.meta.url).href
   }
 ]
 
@@ -167,6 +166,29 @@ const filteredProjects = computed(() => {
   }
   return projects.filter(project => project.category === activeCategory.value)
 })
+
+const getButtonClasses = (category) => {
+  const base = 'px-6 py-3 rounded-full font-medium transition-all duration-200 border backdrop-blur-md';
+  const isActive = activeCategory.value === category;
+  if (isActive) {
+    switch (category) {
+      case 'All':
+        return [base, 'bg-gradient-to-br from-primary-500 to-primary-600 text-white border-primary-400/40 shadow-lg shadow-primary-500/25'];
+      case 'Web Design':
+        return [base, 'bg-gradient-to-br from-blue-500/30 via-purple-500/25 to-indigo-600/30 text-white border-blue-300/40 shadow-lg shadow-blue-500/25'];
+      case 'E-commerce':
+        return [base, 'bg-gradient-to-br from-rose-500/30 via-pink-500/25 to-orange-600/30 text-white border-rose-300/40 shadow-lg shadow-rose-500/25'];
+      case 'Branding':
+        return [base, 'bg-gradient-to-br from-violet-500/30 via-purple-500/25 to-fuchsia-600/30 text-white border-violet-300/40 shadow-lg shadow-violet-500/25'];
+      case 'Development':
+        return [base, 'bg-gradient-to-br from-emerald-500/30 via-teal-500/25 to-cyan-600/30 text-white border-emerald-300/40 shadow-lg shadow-emerald-500/25'];
+      default:
+        return [base, 'bg-primary-500 text-white border-primary-400/40'];
+    }
+  }
+  // Inactive state (glassmorphic neutral)
+  return [base, 'bg-gradient-to-br from-white/10 to-white/5 text-gray-300 border-white/20 hover:from-white/15 hover:to-white/10 hover:border-white/30'];
+}
 
 onMounted(async () => {
   if (process.client) {
