@@ -2,10 +2,14 @@
   <section id="contact" class="section-padding relative overflow-hidden">
     <!-- Background Image -->
     <div class="absolute inset-0">
-      <img 
+      <NuxtImg 
         :src="backgroundImageUrl" 
-        alt="Contact Background" 
+        alt="Contact section background for FiveTwentyFour Studios" 
         class="w-full h-full object-cover"
+        loading="lazy"
+        sizes="100vw"
+        quality="80"
+        format="webp"
       />
       <!-- Dark Overlay -->
       <div class="absolute inset-0 bg-black/70"></div>
@@ -29,7 +33,7 @@
           <div class="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl shadow-black/20 transition-all duration-300 hover:from-white/15 hover:to-white/10 hover:border-white/30 hover:shadow-2xl hover:shadow-black/30 p-8">
             <h3 class="text-2xl font-semibold text-white mb-6 font-display">Send us a message</h3>
             
-            <form @submit.prevent="submitForm" class="space-y-6">
+            <form @submit.prevent="handleFormSubmit" class="space-y-6">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label for="firstName" class="block text-sm font-medium text-gray-300 mb-2 font-body">
@@ -217,7 +221,13 @@
             <div class="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl shadow-black/20 transition-all duration-300 hover:from-white/15 hover:to-white/10 hover:border-white/30 hover:shadow-2xl hover:shadow-black/30 p-8">
               <h3 class="text-2xl font-semibold text-white mb-6">Follow Us</h3>
               <div class="flex space-x-4">
-                <a href="#" class="w-12 h-12 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 hover:from-primary-500/20 hover:to-primary-600/20 hover:border-primary-400/30 rounded-xl flex items-center justify-center transition-all duration-200">
+                <a 
+                  href="https://linkedin.com/company/fivetwentyfour" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="w-12 h-12 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 hover:from-primary-500/20 hover:to-primary-600/20 hover:border-primary-400/30 rounded-xl flex items-center justify-center transition-all duration-200"
+                  @click="trackExternalLink('https://linkedin.com/company/fivetwentyfour', 'LinkedIn')"
+                >
                   <svg class="w-6 h-6 text-gray-300 hover:text-primary-400" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                   </svg>
@@ -233,7 +243,9 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-const backgroundImageUrl = new URL('../assets/images/background2.png', import.meta.url).href
+import backgroundImageUrl from '~/assets/images/background2.png'
+
+const { trackFormSubmission, trackExternalLink, trackButtonClick } = useAnalytics()
 
 const isSubmitting = ref(false)
 
@@ -247,12 +259,21 @@ const form = ref({
   message: ''
 })
 
-const submitForm = async () => {
+const handleFormSubmit = async () => {
   isSubmitting.value = true
   
   try {
+    // Track form submission attempt
+    trackFormSubmission('contact_form', false)
+    
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000))
+    
+    // Track successful form submission
+    trackFormSubmission('contact_form', true)
+    
+    // Track conversion
+    trackButtonClick('Contact Form Submit', 'contact')
     
     // Reset form
     form.value = {
@@ -269,6 +290,7 @@ const submitForm = async () => {
     alert('Thank you for your message! We\'ll get back to you within 24 hours.')
   } catch (error) {
     console.error('Form submission error:', error)
+    trackFormSubmission('contact_form', false)
     alert('Sorry, there was an error sending your message. Please try again.')
   } finally {
     isSubmitting.value = false

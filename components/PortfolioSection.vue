@@ -2,10 +2,14 @@
   <section id="portfolio" class="section-padding relative overflow-hidden">
     <!-- Background Image -->
     <div class="absolute inset-0">
-      <img 
+      <NuxtImg 
         :src="backgroundImageUrl" 
-        alt="Portfolio Background" 
+        alt="Portfolio section background showcasing FiveTwentyFour Studios' design work" 
         class="w-full h-full object-cover"
+        loading="lazy"
+        sizes="100vw"
+        quality="80"
+        format="webp"
       />
       <!-- Dark Overlay -->
       <div class="absolute inset-0 bg-black/70"></div>
@@ -28,7 +32,7 @@
         <button 
           v-for="category in categories" 
           :key="category"
-          @click="activeCategory = category"
+          @click="handleCategoryClick(category)"
           :class="getButtonClasses(category)"
         >
           {{ category }}
@@ -46,10 +50,14 @@
             <!-- Project Image -->
             <div class="aspect-w-16 aspect-h-12 bg-gradient-to-br from-primary-500/20 to-primary-600/20">
               <div class="w-full h-64 relative overflow-hidden">
-                <img 
+                <NuxtImg 
                   :src="project.image" 
-                  :alt="project.name" 
+                  :alt="`${project.name} - ${project.description}`" 
                   class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                  sizes="sm:100vw md:50vw lg:33vw"
+                  quality="85"
+                  format="webp"
                 />
                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300"></div>
               </div>
@@ -58,10 +66,16 @@
             <!-- Overlay -->
             <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
               <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
-                <button class="btn-animated px-6 py-3 rounded-lg font-medium mr-4">
+                <button 
+                  class="btn-animated px-6 py-3 rounded-lg font-medium mr-4"
+                  @click="trackButtonClick('View Project', `portfolio-${project.name}`)"
+                >
                   View Project
                 </button>
-                <button class="btn-animated px-6 py-3 rounded-lg font-medium">
+                <button 
+                  class="btn-animated px-6 py-3 rounded-lg font-medium"
+                  @click="trackButtonClick('Learn More', `portfolio-${project.name}`)"
+                >
                   Learn More
                 </button>
               </div>
@@ -93,7 +107,11 @@
         <p class="text-gray-300 mb-8 max-w-2xl mx-auto font-body">
           Let's create something amazing together. Get in touch to discuss your project and see how we can help bring your vision to life.
         </p>
-        <a href="#contact" class="btn-animated text-lg px-8 py-4">
+        <a 
+          href="#contact" 
+          class="btn-animated text-lg px-8 py-4"
+          @click="trackButtonClick('Start Your Project', 'portfolio-cta')"
+        >
           Start Your Project
         </a>
       </div>
@@ -104,6 +122,8 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import backgroundImageUrl from '~/assets/images/background1.png'
+
+const { trackButtonClick, trackEvent } = useAnalytics()
 
 const activeCategory = ref('All')
 
@@ -166,6 +186,14 @@ const filteredProjects = computed(() => {
   }
   return projects.filter(project => project.category === activeCategory.value)
 })
+
+const handleCategoryClick = (category) => {
+  activeCategory.value = category
+  trackEvent('portfolio_filter', {
+    category: category,
+    label: `Filter by ${category}`
+  })
+}
 
 const getButtonClasses = (category) => {
   const base = 'px-6 py-3 rounded-full font-medium transition-all duration-200 border backdrop-blur-md';

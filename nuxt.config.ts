@@ -2,19 +2,127 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/tailwind.css'],
   modules: [
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/seo',
+    '@nuxt/image',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots'
   ],
+  site: {
+    url: 'https://fivetwentyfourstudios.com',
+    name: 'FiveTwentyFour Studios',
+    description: 'Boutique web & marketing agency specializing in modern, minimal, and stylish websites that help businesses grow.',
+    defaultLocale: 'en'
+  },
+  seo: {
+    redirectToCanonicalSiteUrl: true
+  },
+  sitemap: {
+    hostname: 'https://fivetwentyfourstudios.com',
+    gzip: true,
+    routes: [
+      '/',
+      '/#about',
+      '/#services',
+      '/#portfolio',
+      '/#contact'
+    ]
+  },
+  robots: {
+    UserAgent: '*',
+    Allow: '/',
+    Sitemap: 'https://fivetwentyfourstudios.com/sitemap.xml'
+  },
+  image: {
+    quality: 80,
+    format: ['webp', 'avif', 'png', 'jpg'],
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536
+    }
+  },
   app: {
     head: {
-      title: 'FiveTwentyFour Studios - Boutique Web Design Agency',
+      title: 'FiveTwentyFour Studios - Boutique Web & Marketing Agency',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'FiveTwentyFour Studios is a boutique web design agency specializing in modern, minimal, and stylish websites that help businesses grow.' },
-        { name: 'format-detection', content: 'telephone=no' }
+        { name: 'description', content: 'FiveTwentyFour Studios is a boutique web & marketing agency specializing in modern, minimal, and stylish websites that help businesses grow.' },
+        { name: 'format-detection', content: 'telephone=no' },
+        { name: 'theme-color', content: '#0ea5e9' },
+        { name: 'msapplication-TileColor', content: '#0ea5e9' },
+        { name: 'apple-mobile-web-app-capable', content: 'yes' },
+        { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'FiveTwentyFour Studios' },
+        { property: 'og:title', content: 'FiveTwentyFour Studios - Boutique Web & Marketing Agency' },
+        { property: 'og:description', content: 'Boutique web & marketing agency specializing in modern, minimal, and stylish websites that help businesses grow.' },
+        { property: 'og:image', content: 'https://fivetwentyfourstudios.com/og-image.jpg' },
+        { property: 'og:url', content: 'https://fivetwentyfourstudios.com' },
+        { property: 'og:locale', content: 'en_US' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:site', content: '@fivetwentyfour' },
+        { name: 'twitter:title', content: 'FiveTwentyFour Studios - Boutique Web & Marketing Agency' },
+        { name: 'twitter:description', content: 'Boutique web & marketing agency specializing in modern, minimal, and stylish websites that help businesses grow.' },
+        { name: 'twitter:image', content: 'https://fivetwentyfourstudios.com/og-image.jpg' }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+        { rel: 'manifest', href: '/site.webmanifest' },
+        { rel: 'canonical', href: 'https://fivetwentyfourstudios.com' }
+      ],
+      script: [
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'FiveTwentyFour Studios',
+            description: 'Boutique web & marketing agency specializing in modern, minimal, and stylish websites that help businesses grow.',
+            url: 'https://fivetwentyfourstudios.com',
+            logo: 'https://fivetwentyfourstudios.com/logo.png',
+            sameAs: [
+              'https://twitter.com/fivetwentyfour',
+              'https://linkedin.com/company/fivetwentyfour',
+              'https://instagram.com/fivetwentyfour'
+            ],
+            contactPoint: {
+              '@type': 'ContactPoint',
+              telephone: '+1-555-0123',
+              contactType: 'customer service',
+              areaServed: 'US',
+              availableLanguage: 'English'
+            },
+            address: {
+              '@type': 'PostalAddress',
+              addressCountry: 'US'
+            },
+            service: [
+              {
+                '@type': 'Service',
+                name: 'Web Design',
+                description: 'Modern, responsive web design services'
+              },
+              {
+                '@type': 'Service',
+                name: 'Brand Strategy',
+                description: 'Comprehensive brand strategy and identity design'
+              },
+              {
+                '@type': 'Service',
+                name: 'Marketing Support',
+                description: 'Digital marketing and growth strategy services'
+              }
+            ]
+          })
+        }
       ]
     }
   }

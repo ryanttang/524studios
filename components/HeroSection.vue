@@ -2,10 +2,15 @@
   <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-28">
     <!-- Background Image -->
     <div class="absolute inset-0">
-      <img 
+      <NuxtImg 
         :src="heroImageUrl" 
-        alt="Hero Background" 
+        alt="Modern web design hero background showcasing FiveTwentyFour Studios' creative work" 
         class="w-full h-full object-cover"
+        loading="eager"
+        preload
+        sizes="100vw"
+        quality="85"
+        format="webp"
       />
       <!-- Dark Overlay -->
       <div class="absolute inset-0 bg-black/60"></div>
@@ -26,10 +31,15 @@
       <div class="max-w-4xl mx-auto">
         <!-- Logo -->
         <div class="mb-8 animate-on-scroll">
-          <img 
+          <NuxtImg 
             :src="logoUrl" 
-            alt="FiveTwentyFour Studios" 
+            alt="FiveTwentyFour Studios logo - Boutique web design agency" 
             class="h-28 md:h-36 mx-auto mb-6 filter brightness-0 invert opacity-90"
+            loading="eager"
+            preload
+            sizes="sm:144px md:144px"
+            quality="90"
+            format="webp"
           />
         </div>
         
@@ -48,10 +58,18 @@
         
         <!-- CTA Buttons -->
           <div ref="heroButtons" class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <a href="#portfolio" class="btn-primary text-lg px-8 py-4">
+            <a 
+              href="#portfolio" 
+              class="btn-primary text-lg px-8 py-4"
+              @click="trackButtonClick('View Our Work', 'hero')"
+            >
             View Our Work
           </a>
-            <a href="#contact" class="btn-animated text-lg px-8 py-4">
+            <a 
+              href="#contact" 
+              class="btn-animated text-lg px-8 py-4"
+              @click="trackButtonClick('Start Your Project', 'hero')"
+            >
             Start Your Project
           </a>
         </div>
@@ -100,6 +118,8 @@ import { ref, onMounted } from 'vue'
 import logoUrl from '~/assets/images/logo.png'
 import heroImageUrl from '~/assets/images/hero.png'
 
+const { trackButtonClick, trackScroll } = useAnalytics()
+
 const threeContainer = ref(null)
 const heroTitle = ref(null)
 const heroSubtitle = ref(null)
@@ -114,6 +134,23 @@ onMounted(async () => {
     const THREE = await import('three')
     
     gsap.registerPlugin(ScrollTrigger)
+    
+    // Track scroll depth
+    let maxScrollDepth = 0
+    const trackScrollDepth = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight
+      const scrollPercent = Math.round((scrollTop / docHeight) * 100)
+      
+      if (scrollPercent > maxScrollDepth) {
+        maxScrollDepth = scrollPercent
+        if (scrollPercent % 25 === 0) { // Track at 25%, 50%, 75%, 100%
+          trackScroll(scrollPercent)
+        }
+      }
+    }
+    
+    window.addEventListener('scroll', trackScrollDepth)
     
     // Initialize Three.js background
     initThreeBackground(THREE)

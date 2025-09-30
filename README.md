@@ -1,6 +1,6 @@
-# FiveTwentyFour Studios - Boutique Web Design Agency
+# FiveTwentyFour Studios - Boutique Web & Marketing Agency
 
-A modern, minimal, and stylish one-page website for FiveTwentyFour Studios, a boutique web design agency. Built with Nuxt 3, GSAP, Tailwind CSS, Headless UI, and Three.js.
+A modern, minimal, and stylish one-page website for FiveTwentyFour Studios, a boutique web & marketing agency. Built with Nuxt 3, GSAP, Tailwind CSS, Headless UI, and Three.js.
 
 ## Features
 
