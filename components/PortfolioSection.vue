@@ -58,10 +58,10 @@
             <!-- Overlay -->
             <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
               <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
-                <button class="bg-primary-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-600 transition-colors duration-200 mr-4">
+                <button class="btn-animated px-6 py-3 rounded-lg font-medium mr-4">
                   View Project
                 </button>
-                <button class="border border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-gray-900 transition-colors duration-200">
+                <button class="btn-animated px-6 py-3 rounded-lg font-medium">
                   Learn More
                 </button>
               </div>
@@ -93,7 +93,7 @@
         <p class="text-gray-300 mb-8 max-w-2xl mx-auto font-body">
           Let's create something amazing together. Get in touch to discuss your project and see how we can help bring your vision to life.
         </p>
-        <a href="#contact" class="btn-primary text-lg px-8 py-4">
+        <a href="#contact" class="btn-animated text-lg px-8 py-4">
           Start Your Project
         </a>
       </div>

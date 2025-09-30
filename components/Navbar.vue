@@ -26,7 +26,7 @@
         
         <!-- CTA Button -->
         <div class="hidden md:block">
-          <a href="#contact" class="btn-primary font-body">
+          <a href="#contact" class="btn-animated font-body">
             Get Started
           </a>
         </div>
@@ -73,7 +73,7 @@
           <a href="#portfolio" class="mobile-nav-link font-body">Portfolio</a>
           <a href="#about" class="mobile-nav-link font-body">About</a>
           <a href="#contact" class="mobile-nav-link font-body">Contact</a>
-          <a href="#contact" class="btn-primary w-full text-center mt-4 font-body">
+          <a href="#contact" class="btn-animated w-full text-center mt-4 font-body">
             Get Started
           </a>
         </div>

@@ -228,7 +228,7 @@
         <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
           Let's discuss your project and create a custom solution that meets your specific needs and goals.
         </p>
-        <a href="#contact" class="btn-primary text-lg px-8 py-4">
+            <a href="#contact" class="btn-animated text-lg px-8 py-4">
           Start Your Project
         </a>
       </div>

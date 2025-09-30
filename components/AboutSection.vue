@@ -63,7 +63,7 @@
           </div>
           
           <!-- CTA -->
-          <a href="#contact" class="btn-primary text-lg px-8 py-4">
+          <a href="#contact" class="btn-animated text-lg px-8 py-4">
             Work With Us
           </a>
         </div>

@@ -47,11 +47,11 @@
         </p>
         
         <!-- CTA Buttons -->
-        <div ref="heroButtons" class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <a href="#portfolio" class="btn-primary text-lg px-8 py-4">
+          <div ref="heroButtons" class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <a href="#portfolio" class="btn-primary text-lg px-8 py-4">
             View Our Work
           </a>
-          <a href="#contact" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 hover:border-white/40 font-medium py-3 px-6 rounded-lg transition-all duration-200 text-lg px-8 py-4">
+            <a href="#contact" class="btn-animated text-lg px-8 py-4">
             Start Your Project
           </a>
         </div>
