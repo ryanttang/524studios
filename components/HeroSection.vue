@@ -2,15 +2,11 @@
   <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-28">
     <!-- Background Image -->
     <div class="absolute inset-0">
-      <NuxtImg 
-        :src="heroImageUrl" 
+      <img 
+        src="/images/hero.png" 
         alt="Modern web design hero background showcasing FiveTwentyFour Studios' creative work" 
         class="w-full h-full object-cover"
         loading="eager"
-        preload
-        sizes="100vw"
-        quality="85"
-        format="webp"
       />
       <!-- Dark Overlay -->
       <div class="absolute inset-0 bg-black/60"></div>
@@ -31,15 +27,11 @@
       <div class="max-w-4xl mx-auto">
         <!-- Logo -->
         <div class="mb-8 animate-on-scroll">
-          <NuxtImg 
-            :src="logoUrl" 
+          <img 
+            src="/logo.png" 
             alt="FiveTwentyFour Studios logo - Boutique web design agency" 
             class="h-28 md:h-36 mx-auto mb-6 filter brightness-0 invert opacity-90"
             loading="eager"
-            preload
-            sizes="sm:144px md:144px"
-            quality="90"
-            format="webp"
           />
         </div>
         
@@ -115,8 +107,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import logoUrl from '~/assets/images/logo.png'
-import heroImageUrl from '~/assets/images/hero.png'
+// Images will be referenced directly in template using NuxtImg
 
 const { trackButtonClick, trackScroll } = useAnalytics()
 

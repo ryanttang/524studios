@@ -63,17 +63,32 @@
 
   /* Animated gradient CTA button variant */
   .btn-animated {
-    @apply relative overflow-hidden font-medium py-3 px-6 rounded-xl border transition-all duration-300 text-white;
-    background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899, #f59e0b, #10b981, #ef4444, #f97316, #eab308, #22c55e, #06b6d4, #6366f1, #a855f7, #ec4899, #3b82f6);
-    background-size: 300% 300%;
-    animation: gradient-shift 28s ease-in-out infinite;
-    border-color: rgba(255, 255, 255, 0.2);
+    @apply relative font-medium py-3 px-6 rounded-xl transition-all duration-300 text-white;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid transparent;
     box-shadow: 0 8px 18px rgba(59, 130, 246, 0.15);
     filter: saturate(0.85) brightness(0.95);
   }
+  
+  .btn-animated::before {
+    content: '';
+    @apply absolute inset-0 rounded-xl;
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899, #f59e0b, #10b981, #ef4444, #f97316, #eab308, #22c55e, #06b6d4, #6366f1, #a855f7, #ec4899, #3b82f6);
+    background-size: 300% 300%;
+    animation: gradient-shift 28s ease-in-out infinite;
+    z-index: -1;
+    padding: 2px;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+  }
+  
   .btn-animated:hover {
     filter: saturate(0.95) brightness(1.0);
     box-shadow: 0 12px 28px rgba(59, 130, 246, 0.22);
+    background: rgba(0, 0, 0, 0.2);
   }
 }
 

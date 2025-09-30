@@ -6,9 +6,10 @@
         <div class="flex-shrink-0">
           <NuxtLink to="/" class="flex items-center">
             <img 
-              :src="logoUrl" 
+              src="/logo.png" 
               alt="FiveTwentyFour Studios" 
               class="h-8 md:h-10 filter brightness-0 invert"
+              loading="eager"
             />
           </NuxtLink>
         </div>
@@ -84,7 +85,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import logoUrl from '~/assets/images/logo.png'
+// Logo will be referenced directly in template
 
 const mobileMenuOpen = ref(false)
 

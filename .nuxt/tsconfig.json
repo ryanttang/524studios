@@ -151,6 +151,12 @@
       "#imports": [
         "./imports"
       ],
+      "#link-checker": [
+        "../node_modules/nuxt-link-checker/dist/runtime"
+      ],
+      "#link-checker/*": [
+        "../node_modules/nuxt-link-checker/dist/runtime/*"
+      ],
       "#og-image": [
         "../node_modules/nuxt-og-image/dist/runtime"
       ],
@@ -176,7 +182,7 @@
         "../node_modules/nuxt-seo-utils/dist/runtime/*"
       ],
       "#app-manifest": [
-        "./manifest/meta/803c5a3c-f90f-4e80-8e8d-0a4c28cf79e6.json"
+        "./manifest/meta/dev"
       ],
       "#components": [
         "./components"
@@ -233,6 +239,6 @@
     "../node_modules/dist/runtime/server",
     "../node_modules/nuxt-site-config/dist/runtime/server",
     "../node_modules/nuxt-site-config/dist/dist/runtime/server",
-    "../.output"
+    "dev"
   ]
 }

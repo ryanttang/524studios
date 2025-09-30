@@ -149,6 +149,12 @@
       "#unhead/composables": [
         "../node_modules/nuxt/dist/head/runtime/composables/v3"
       ],
+      "#link-checker": [
+        "../node_modules/nuxt-link-checker/dist/runtime"
+      ],
+      "#link-checker/*": [
+        "../node_modules/nuxt-link-checker/dist/runtime/*"
+      ],
       "#og-image": [
         "../node_modules/nuxt-og-image/dist/runtime"
       ],
@@ -188,11 +194,14 @@
       "#internal/nuxt-robots/*": [
         "../node_modules/@nuxtjs/robots/dist/runtime/server/composables/*"
       ],
+      "#link-checker/content-provider": [
+        "../node_modules/nuxt-link-checker/dist/runtime/server/providers/noop"
+      ],
       "#og-image/renderers/satori": [
-        "../node_modules/nuxt-og-image/dist/runtime/mock/empty"
+        "../node_modules/nuxt-og-image/dist/runtime/server/og-image/satori/renderer"
       ],
       "#og-image/renderers/chromium": [
-        "../node_modules/nuxt-og-image/dist/runtime/mock/empty"
+        "../node_modules/nuxt-og-image/dist/runtime/server/og-image/chromium/renderer"
       ],
       "#og-image/bindings/css-inline": [
         "../node_modules/nuxt-og-image/dist/runtime/mock/empty"
@@ -201,13 +210,13 @@
         "../node_modules/nuxt-og-image/dist/runtime/mock/empty"
       ],
       "#og-image/bindings/resvg": [
-        "../node_modules/nuxt-og-image/dist/runtime/mock/empty"
+        "../node_modules/nuxt-og-image/dist/runtime/server/og-image/bindings/resvg/node"
       ],
       "#og-image/bindings/satori": [
-        "../node_modules/nuxt-og-image/dist/runtime/mock/empty"
+        "../node_modules/nuxt-og-image/dist/runtime/server/og-image/bindings/satori/node"
       ],
       "#og-image/bindings/chromium": [
-        "../node_modules/nuxt-og-image/dist/runtime/mock/empty"
+        "../node_modules/nuxt-og-image/dist/runtime/server/og-image/bindings/chromium/chrome-launcher"
       ]
     },
     "lib": [

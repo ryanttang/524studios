@@ -423,9 +423,43 @@ declare module 'nuxt/schema' {
       strictNuxtContentPaths: any,
 
       isNuxtContentDocumentDriven: boolean,
+
+      componentDirs: Array<string>,
    },
   }
   interface PublicRuntimeConfig {
+   "nuxt-link-checker": {
+      version: string,
+
+      hasSitemapModule: boolean,
+
+      rootDir: string,
+
+      excludeLinks: Array<any>,
+
+      skipInspections: Array<any>,
+
+      fetchTimeout: number,
+
+      showLiveInspections: boolean,
+
+      fetchRemoteUrls: boolean,
+   },
+
+   "nuxt-schema-org": {
+      reactive: boolean,
+
+      minify: boolean,
+
+      scriptAttributes: {
+         "data-nuxt-schema-org": boolean,
+      },
+
+      identity: any,
+
+      version: string,
+   },
+
    "seo-utils": {
       canonicalQueryWhitelist: Array<string>,
 

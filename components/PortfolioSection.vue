@@ -2,14 +2,11 @@
   <section id="portfolio" class="section-padding relative overflow-hidden">
     <!-- Background Image -->
     <div class="absolute inset-0">
-      <NuxtImg 
-        :src="backgroundImageUrl" 
+      <img 
+        src="/images/background1.png" 
         alt="Portfolio section background showcasing FiveTwentyFour Studios' design work" 
         class="w-full h-full object-cover"
         loading="lazy"
-        sizes="100vw"
-        quality="80"
-        format="webp"
       />
       <!-- Dark Overlay -->
       <div class="absolute inset-0 bg-black/70"></div>
@@ -48,19 +45,16 @@
         >
           <div class="relative overflow-hidden bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl shadow-black/20 transition-all duration-300 hover:from-white/15 hover:to-white/10 hover:border-white/30 hover:shadow-2xl hover:shadow-black/30">
             <!-- Project Image -->
-            <div class="aspect-w-16 aspect-h-12 bg-gradient-to-br from-primary-500/20 to-primary-600/20">
-              <div class="w-full h-64 relative overflow-hidden">
-                <NuxtImg 
-                  :src="project.image" 
-                  :alt="`${project.name} - ${project.description}`" 
-                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  loading="lazy"
-                  sizes="sm:100vw md:50vw lg:33vw"
-                  quality="85"
-                  format="webp"
-                />
-                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300"></div>
-              </div>
+            <div class="w-full h-64 relative overflow-hidden bg-gray-800 rounded-t-2xl">
+              <img 
+                :src="project.image" 
+                :alt="`${project.name} - ${project.description}`" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                @error="console.error('Image failed to load:', project.image)"
+                @load="console.log('Image loaded:', project.image)"
+              />
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300"></div>
             </div>
             
             <!-- Overlay -->
@@ -121,7 +115,7 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import backgroundImageUrl from '~/assets/images/background1.png'
+// Background image will be referenced directly in template
 
 const { trackButtonClick, trackEvent } = useAnalytics()
 
@@ -136,7 +130,7 @@ const projects = [
     description: 'A sleek, modern website for a tech startup with focus on user experience and conversion optimization.',
     category: 'Web Design',
     technologies: ['React', 'Tailwind CSS', 'GSAP'],
-    image: new URL('../assets/images/work/tech.jpg', import.meta.url).href
+    image: '/images/work/tech.jpg'
   },
   {
     id: 2,
@@ -144,7 +138,7 @@ const projects = [
     description: 'Complete e-commerce solution with custom design, payment integration, and inventory management.',
     category: 'E-commerce',
     technologies: ['Vue.js', 'Nuxt', 'Stripe'],
-    image: new URL('../assets/images/work/fashion.jpg', import.meta.url).href
+    image: '/images/work/fashion.jpg'
   },
   {
     id: 3,
@@ -152,7 +146,7 @@ const projects = [
     description: 'Complete brand identity and website design for a high-end restaurant chain.',
     category: 'Branding',
     technologies: ['Branding', 'Web Design', 'Photography'],
-    image: new URL('../assets/images/work/restaurant.jpg', import.meta.url).href
+    image: '/images/work/restaurant.jpg'
   },
   {
     id: 4,
@@ -160,7 +154,7 @@ const projects = [
     description: 'Complex dashboard application with real-time data visualization and user management.',
     category: 'Development',
     technologies: ['React', 'Node.js', 'MongoDB'],
-    image: new URL('../assets/images/work/data.jpg', import.meta.url).href
+    image: '/images/work/data.jpg'
   },
   {
     id: 5,
@@ -168,7 +162,7 @@ const projects = [
     description: 'Portfolio website for a creative agency with interactive animations and modern design.',
     category: 'Web Design',
     technologies: ['GSAP', 'Three.js', 'WebGL'],
-    image: new URL('../assets/images/work/creative.jpg', import.meta.url).href
+    image: '/images/work/creative.jpg'
   },
   {
     id: 6,
@@ -176,7 +170,7 @@ const projects = [
     description: 'Comprehensive scheduling platform for service providers with appointment management, client tracking, and automated reminders.',
     category: 'Development',
     technologies: ['Vue.js', 'Firebase', 'Calendar API'],
-    image: new URL('../assets/images/work/booking.jpg', import.meta.url).href
+    image: '/images/work/booking.jpg'
   }
 ]
 

@@ -44,9 +44,12 @@ export default defineNuxtConfig({
       xl: 1280,
       xxl: 1536
     },
-    // Disable IPX for static generation to avoid prerender errors
-    ipx: {
-      maxAge: 60 * 60 * 24 * 7 // 7 days
+    // Disable IPX completely for development
+    ipx: false,
+    // Use public directory for images
+    domains: [],
+    alias: {
+      '/images': '/public/images'
     }
   },
   nitro: {

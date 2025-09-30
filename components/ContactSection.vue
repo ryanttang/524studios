@@ -2,14 +2,11 @@
   <section id="contact" class="section-padding relative overflow-hidden">
     <!-- Background Image -->
     <div class="absolute inset-0">
-      <NuxtImg 
-        :src="backgroundImageUrl" 
+      <img 
+        src="/images/background2.png" 
         alt="Contact section background for FiveTwentyFour Studios" 
         class="w-full h-full object-cover"
         loading="lazy"
-        sizes="100vw"
-        quality="80"
-        format="webp"
       />
       <!-- Dark Overlay -->
       <div class="absolute inset-0 bg-black/70"></div>
@@ -243,7 +240,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import backgroundImageUrl from '~/assets/images/background2.png'
+// Background image will be referenced directly in template
 
 const { trackFormSubmission, trackExternalLink, trackButtonClick } = useAnalytics()
 
