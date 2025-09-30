@@ -1,6 +1,17 @@
 <template>
-  <section id="portfolio" class="section-padding bg-gray-900">
-    <div class="container-custom">
+  <section id="portfolio" class="section-padding relative overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+      <img 
+        :src="backgroundImageUrl" 
+        alt="Portfolio Background" 
+        class="w-full h-full object-cover"
+      />
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-black/70"></div>
+    </div>
+    
+    <div class="container-custom relative z-10">
       <!-- Section Header -->
       <div class="text-center mb-16 animate-on-scroll">
         <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 font-display">
@@ -99,6 +110,7 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+import backgroundImageUrl from '~/assets/images/background1.png'
 
 const activeCategory = ref('All')
 

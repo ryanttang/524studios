@@ -1,6 +1,17 @@
 <template>
-  <section id="contact" class="section-padding bg-gray-900">
-    <div class="container-custom">
+  <section id="contact" class="section-padding relative overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+      <img 
+        :src="backgroundImageUrl" 
+        alt="Contact Background" 
+        class="w-full h-full object-cover"
+      />
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-black/70"></div>
+    </div>
+    
+    <div class="container-custom relative z-10">
       <!-- Section Header -->
       <div class="text-center mb-16 animate-on-scroll">
         <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 font-display">
@@ -244,6 +255,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import backgroundImageUrl from '~/assets/images/background2.png'
 
 const isSubmitting = ref(false)
 

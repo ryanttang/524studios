@@ -1,11 +1,11 @@
 <template>
   <footer class="bg-black text-white">
-    <div class="container-custom section-padding">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div class="container-custom py-8 md:py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
         <!-- Company Info -->
         <div class="md:col-span-2">
-          <h3 class="text-2xl font-bold mb-4 font-display">FiveTwentyFour Studios</h3>
-          <p class="text-gray-400 mb-6 max-w-md font-body">
+          <h3 class="text-xl font-bold mb-3 font-display">FiveTwentyFour Studios</h3>
+          <p class="text-gray-400 mb-4 max-w-md font-body text-sm">
             A boutique web design agency specializing in modern, minimal, and stylish websites that help businesses grow and succeed online.
           </p>
           <div class="flex space-x-4">
@@ -32,8 +32,8 @@
         
         <!-- Quick Links -->
         <div>
-          <h4 class="text-lg font-semibold mb-4 font-display">Quick Links</h4>
-          <ul class="space-y-2">
+          <h4 class="text-base font-semibold mb-3 font-display">Quick Links</h4>
+          <ul class="space-y-1">
             <li><a href="#home" class="text-gray-400 hover:text-white transition-colors duration-200 font-body">Home</a></li>
             <li><a href="#services" class="text-gray-400 hover:text-white transition-colors duration-200 font-body">Services</a></li>
             <li><a href="#portfolio" class="text-gray-400 hover:text-white transition-colors duration-200 font-body">Portfolio</a></li>
@@ -44,8 +44,8 @@
         
         <!-- Services -->
         <div>
-          <h4 class="text-lg font-semibold mb-4 font-display">Services</h4>
-          <ul class="space-y-2">
+          <h4 class="text-base font-semibold mb-3 font-display">Services</h4>
+          <ul class="space-y-1">
             <li><span class="text-gray-400 font-body">Web Design</span></li>
             <li><span class="text-gray-400 font-body">Web Development</span></li>
             <li><span class="text-gray-400 font-body">UI/UX Design</span></li>
@@ -56,12 +56,12 @@
       </div>
       
       <!-- Bottom Bar -->
-      <div class="border-t border-gray-800 mt-12 pt-8">
+      <div class="border-t border-gray-800 mt-8 pt-6">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <p class="text-gray-500 text-sm font-body">
             © {{ currentYear }} FiveTwentyFour Studios. All rights reserved.
           </p>
-          <div class="flex space-x-6 mt-4 md:mt-0">
+          <div class="flex space-x-4 mt-3 md:mt-0">
             <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors duration-200 font-body">Privacy Policy</a>
             <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors duration-200 font-body">Terms of Service</a>
           </div>

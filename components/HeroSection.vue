@@ -34,10 +34,10 @@
         </div>
         
         <!-- Main Heading -->
-        <h1 ref="heroTitle" class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight font-display">
-          <span class="block">Boutique</span>
-          <span class="block text-primary-400">Web Design</span>
-          <span class="block">That Converts</span>
+        <h1 ref="heroTitle" class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight font-display">
+          <span class="block">Boutique Web, Brand, &</span>
+          <span class="block">Marketing Services</span>
+          <span class="block">Curated for <span class="animated-gradient-text">YOU</span></span>
         </h1>
         
         <!-- Subtitle -->
@@ -56,19 +56,31 @@
           </a>
         </div>
         
-        <!-- Stats -->
-        <div ref="heroStats" class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
-          <div class="text-center">
-            <div class="text-3xl md:text-4xl font-bold text-primary-400 mb-2">50+</div>
-            <div class="text-gray-300">Projects Completed</div>
+        <!-- Service Cards -->
+        <div ref="heroStats" class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+          <div class="bg-gradient-to-br from-blue-500/20 to-purple-600/20 backdrop-blur-md border border-blue-400/30 rounded-xl p-6 text-center transition-all duration-300 hover:from-blue-400/30 hover:to-purple-500/30 hover:border-blue-300/50 hover:shadow-lg hover:shadow-blue-500/25">
+            <div class="w-12 h-12 bg-gradient-to-br from-blue-400/30 to-purple-500/30 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-white font-display">Web Design</h3>
           </div>
-          <div class="text-center">
-            <div class="text-3xl md:text-4xl font-bold text-primary-400 mb-2">100%</div>
-            <div class="text-gray-300">Client Satisfaction</div>
+          <div class="bg-gradient-to-br from-green-500/20 to-teal-600/20 backdrop-blur-md border border-green-400/30 rounded-xl p-6 text-center transition-all duration-300 hover:from-green-400/30 hover:to-teal-500/30 hover:border-green-300/50 hover:shadow-lg hover:shadow-green-500/25">
+            <div class="w-12 h-12 bg-gradient-to-br from-green-400/30 to-teal-500/30 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-white font-display">Marketing Support</h3>
           </div>
-          <div class="text-center">
-            <div class="text-3xl md:text-4xl font-bold text-primary-400 mb-2">5+</div>
-            <div class="text-gray-300">Years Experience</div>
+          <div class="bg-gradient-to-br from-orange-500/20 to-red-600/20 backdrop-blur-md border border-orange-400/30 rounded-xl p-6 text-center transition-all duration-300 hover:from-orange-400/30 hover:to-red-500/30 hover:border-orange-300/50 hover:shadow-lg hover:shadow-orange-500/25">
+            <div class="w-12 h-12 bg-gradient-to-br from-orange-400/30 to-red-500/30 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-orange-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-white font-display">Brand Strategy</h3>
           </div>
         </div>
       </div>
@@ -239,5 +251,26 @@ function initThreeBackground(THREE) {
 
 .animation-delay-4000 {
   animation-delay: 4s;
+}
+
+.animated-gradient-text {
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899, #f59e0b, #10b981, #ef4444, #f97316, #eab308, #22c55e, #06b6d4, #6366f1, #a855f7, #ec4899, #3b82f6);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 15s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 </style>
