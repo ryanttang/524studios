@@ -9,16 +9,16 @@ export default defineNuxtConfig({
     '@nuxtjs/robots'
   ],
   site: {
-    url: 'https://fivetwentyfourstudios.com',
+    url: 'https://524studios.vercel.app',
     name: 'FiveTwentyFour Studios',
     description: 'Boutique web & marketing agency specializing in modern, minimal, and stylish websites that help businesses grow.',
     defaultLocale: 'en'
   },
   seo: {
-    redirectToCanonicalSiteUrl: true
+    redirectToCanonicalSiteUrl: false
   },
   sitemap: {
-    hostname: 'https://fivetwentyfourstudios.com',
+    hostname: 'https://524studios.vercel.app',
     gzip: true,
     routes: [
       '/',
@@ -31,7 +31,7 @@ export default defineNuxtConfig({
   robots: {
     UserAgent: '*',
     Allow: '/',
-    Sitemap: 'https://fivetwentyfourstudios.com/sitemap.xml'
+    Sitemap: 'https://524studios.vercel.app/sitemap.xml'
   },
   image: {
     quality: 80,
@@ -90,14 +90,14 @@ export default defineNuxtConfig({
         { property: 'og:site_name', content: 'FiveTwentyFour Studios' },
         { property: 'og:title', content: 'FiveTwentyFour Studios - Boutique Web & Marketing Agency' },
         { property: 'og:description', content: 'Boutique web & marketing agency specializing in modern, minimal, and stylish websites that help businesses grow.' },
-        { property: 'og:image', content: 'https://fivetwentyfourstudios.com/og-image.jpg' },
-        { property: 'og:url', content: 'https://fivetwentyfourstudios.com' },
+        { property: 'og:image', content: 'https://524studios.vercel.app/og-image.jpg' },
+        { property: 'og:url', content: 'https://524studios.vercel.app' },
         { property: 'og:locale', content: 'en_US' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: '@fivetwentyfour' },
         { name: 'twitter:title', content: 'FiveTwentyFour Studios - Boutique Web & Marketing Agency' },
         { name: 'twitter:description', content: 'Boutique web & marketing agency specializing in modern, minimal, and stylish websites that help businesses grow.' },
-        { name: 'twitter:image', content: 'https://fivetwentyfourstudios.com/og-image.jpg' }
+        { name: 'twitter:image', content: 'https://524studios.vercel.app/og-image.jpg' }
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -105,7 +105,7 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
         { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
         { rel: 'manifest', href: '/site.webmanifest' },
-        { rel: 'canonical', href: 'https://fivetwentyfourstudios.com' }
+        { rel: 'canonical', href: 'https://524studios.vercel.app' }
       ],
       script: [
         {
@@ -115,8 +115,8 @@ export default defineNuxtConfig({
             '@type': 'Organization',
             name: 'FiveTwentyFour Studios',
             description: 'Boutique web & marketing agency specializing in modern, minimal, and stylish websites that help businesses grow.',
-            url: 'https://fivetwentyfourstudios.com',
-            logo: 'https://fivetwentyfourstudios.com/logo.png',
+            url: 'https://524studios.vercel.app',
+            logo: 'https://524studios.vercel.app/logo.png',
             sameAs: [
               'https://twitter.com/fivetwentyfour',
               'https://linkedin.com/company/fivetwentyfour',
