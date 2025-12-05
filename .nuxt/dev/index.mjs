@@ -764,6 +764,8 @@ const _inlineRuntimeConfig = {
           "/_nuxt/**",
           "/_nuxt/**",
           "/_nuxt/**",
+          "/_nuxt/**",
+          "/_nuxt/**",
           "/_nuxt/**"
         ],
         "includeAppSources": true
@@ -1152,10 +1154,86 @@ const _inlineRuntimeConfig = {
             "allow": true
           }
         ]
+      },
+      {
+        "comment": [],
+        "disallow": [],
+        "allow": [
+          "/",
+          "/assets/",
+          "/images/",
+          "/css/",
+          "/js/"
+        ],
+        "userAgent": [
+          "*"
+        ],
+        "contentUsage": [],
+        "_indexable": true,
+        "_rules": [
+          {
+            "pattern": "/",
+            "allow": true
+          },
+          {
+            "pattern": "/assets/",
+            "allow": true
+          },
+          {
+            "pattern": "/images/",
+            "allow": true
+          },
+          {
+            "pattern": "/css/",
+            "allow": true
+          },
+          {
+            "pattern": "/js/",
+            "allow": true
+          }
+        ]
+      },
+      {
+        "comment": [],
+        "disallow": [],
+        "allow": [
+          "/",
+          "/assets/",
+          "/images/",
+          "/css/",
+          "/js/"
+        ],
+        "userAgent": [
+          "*"
+        ],
+        "contentUsage": [],
+        "_indexable": true,
+        "_rules": [
+          {
+            "pattern": "/",
+            "allow": true
+          },
+          {
+            "pattern": "/assets/",
+            "allow": true
+          },
+          {
+            "pattern": "/images/",
+            "allow": true
+          },
+          {
+            "pattern": "/css/",
+            "allow": true
+          },
+          {
+            "pattern": "/js/",
+            "allow": true
+          }
+        ]
       }
     ],
     "sitemap": [
-      "https://fivetwentyfourstudios.com/sitemap.xml",
+      "https://524studios.vercel.app/sitemap.xml",
       "/sitemap.xml"
     ],
     "header": true,
@@ -1598,7 +1676,7 @@ const _MfqVj0lgX9QKGJsWyHZ8YnH9mwRPpPRBYbEsCiyzuU = (function(nitro) {
 
 const rootDir = "/Users/ryantang/524studios";
 
-const appHead = {"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"},{"rel":"apple-touch-icon","sizes":"180x180","href":"/apple-touch-icon.png"},{"rel":"icon","type":"image/png","sizes":"32x32","href":"/favicon-32x32.png"},{"rel":"icon","type":"image/png","sizes":"16x16","href":"/favicon-16x16.png"},{"rel":"manifest","href":"/site.webmanifest"},{"rel":"canonical","href":"https://524studios.vercel.app"}],"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"description","content":"FiveTwentyFour Studios is a boutique web & marketing agency specializing in modern, minimal, and stylish websites that help businesses grow."},{"name":"format-detection","content":"telephone=no"},{"name":"theme-color","content":"#0ea5e9"},{"name":"msapplication-TileColor","content":"#0ea5e9"},{"name":"apple-mobile-web-app-capable","content":"yes"},{"name":"apple-mobile-web-app-status-bar-style","content":"black-translucent"},{"property":"og:type","content":"website"},{"property":"og:site_name","content":"FiveTwentyFour Studios"},{"property":"og:title","content":"FiveTwentyFour Studios - Boutique Web & Marketing Agency"},{"property":"og:description","content":"Boutique web & marketing agency specializing in modern, minimal, and stylish websites that help businesses grow."},{"property":"og:image","content":"https://524studios.vercel.app/og-image.jpg"},{"property":"og:url","content":"https://524studios.vercel.app"},{"property":"og:locale","content":"en_US"},{"name":"twitter:card","content":"summary_large_image"},{"name":"twitter:site","content":"@fivetwentyfour"},{"name":"twitter:title","content":"FiveTwentyFour Studios - Boutique Web & Marketing Agency"},{"name":"twitter:description","content":"Boutique web & marketing agency specializing in modern, minimal, and stylish websites that help businesses grow."},{"name":"twitter:image","content":"https://524studios.vercel.app/og-image.jpg"}],"style":[],"script":[{"type":"application/ld+json","innerHTML":"{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"FiveTwentyFour Studios\",\"description\":\"Boutique web & marketing agency specializing in modern, minimal, and stylish websites that help businesses grow.\",\"url\":\"https://fivetwentyfourstudios.com\",\"logo\":\"https://fivetwentyfourstudios.com/logo.png\",\"sameAs\":[\"https://twitter.com/fivetwentyfour\",\"https://linkedin.com/company/fivetwentyfour\",\"https://instagram.com/fivetwentyfour\"],\"contactPoint\":{\"@type\":\"ContactPoint\",\"telephone\":\"+1-555-0123\",\"contactType\":\"customer service\",\"areaServed\":\"US\",\"availableLanguage\":\"English\"},\"address\":{\"@type\":\"PostalAddress\",\"addressCountry\":\"US\"},\"service\":[{\"@type\":\"Service\",\"name\":\"Web Design\",\"description\":\"Modern, responsive web design services\"},{\"@type\":\"Service\",\"name\":\"Brand Strategy\",\"description\":\"Comprehensive brand strategy and identity design\"},{\"@type\":\"Service\",\"name\":\"Marketing Support\",\"description\":\"Digital marketing and growth strategy services\"}]}"}],"noscript":[],"title":"FiveTwentyFour Studios - Boutique Web & Marketing Agency","htmlAttrs":{}};
+const appHead = {"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"},{"rel":"apple-touch-icon","sizes":"180x180","href":"/apple-touch-icon.png"},{"rel":"icon","type":"image/png","sizes":"32x32","href":"/favicon-32x32.png"},{"rel":"icon","type":"image/png","sizes":"16x16","href":"/favicon-16x16.png"},{"rel":"manifest","href":"/site.webmanifest"},{"rel":"canonical","href":"https://524studios.vercel.app"}],"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"description","content":"FiveTwentyFour Studios is a boutique web & marketing agency specializing in modern, minimal, and stylish websites that help businesses grow."},{"name":"format-detection","content":"telephone=no"},{"name":"theme-color","content":"#0ea5e9"},{"name":"msapplication-TileColor","content":"#0ea5e9"},{"name":"apple-mobile-web-app-capable","content":"yes"},{"name":"apple-mobile-web-app-status-bar-style","content":"black-translucent"},{"property":"og:type","content":"website"},{"property":"og:site_name","content":"FiveTwentyFour Studios"},{"property":"og:title","content":"FiveTwentyFour Studios - Boutique Web & Marketing Agency"},{"property":"og:description","content":"Boutique web & marketing agency specializing in modern, minimal, and stylish websites that help businesses grow."},{"property":"og:image","content":"https://524studios.vercel.app/og-image.jpg"},{"property":"og:url","content":"https://524studios.vercel.app"},{"property":"og:locale","content":"en_US"},{"name":"twitter:card","content":"summary_large_image"},{"name":"twitter:site","content":"@fivetwentyfour"},{"name":"twitter:title","content":"FiveTwentyFour Studios - Boutique Web & Marketing Agency"},{"name":"twitter:description","content":"Boutique web & marketing agency specializing in modern, minimal, and stylish websites that help businesses grow."},{"name":"twitter:image","content":"https://524studios.vercel.app/og-image.jpg"}],"style":[],"script":[{"type":"application/ld+json","innerHTML":"{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"FiveTwentyFour Studios\",\"description\":\"Boutique web & marketing agency specializing in modern, minimal, and stylish websites that help businesses grow.\",\"url\":\"https://524studios.vercel.app\",\"logo\":\"https://524studios.vercel.app/logo.png\",\"sameAs\":[\"https://twitter.com/fivetwentyfour\",\"https://linkedin.com/company/fivetwentyfour\",\"https://instagram.com/fivetwentyfour\"],\"contactPoint\":{\"@type\":\"ContactPoint\",\"telephone\":\"+1-555-0123\",\"contactType\":\"customer service\",\"areaServed\":\"US\",\"availableLanguage\":\"English\"},\"address\":{\"@type\":\"PostalAddress\",\"addressCountry\":\"US\"},\"service\":[{\"@type\":\"Service\",\"name\":\"Web Design\",\"description\":\"Modern, responsive web design services\"},{\"@type\":\"Service\",\"name\":\"Brand Strategy\",\"description\":\"Comprehensive brand strategy and identity design\"},{\"@type\":\"Service\",\"name\":\"Marketing Support\",\"description\":\"Digital marketing and growth strategy services\"}]}"}],"noscript":[],"title":"FiveTwentyFour Studios - Boutique Web & Marketing Agency","htmlAttrs":{}};
 
 const appRootTag = "div";
 
