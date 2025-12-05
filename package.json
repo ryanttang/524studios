@@ -24,6 +24,7 @@
     "@nuxtjs/tailwindcss": "^6.8.4",
     "@types/three": "^0.158.0",
     "gsap": "^3.12.2",
+    "resend": "^6.5.2",
     "three": "^0.158.0"
   }
 }

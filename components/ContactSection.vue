@@ -248,8 +248,19 @@ const handleFormSubmit = async () => {
     // Track form submission attempt
     trackFormSubmission('contact_form', false)
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    // Send form data to API endpoint
+    const response = await $fetch('/api/contact', {
+      method: 'POST',
+      body: {
+        firstName: form.value.firstName,
+        lastName: form.value.lastName,
+        email: form.value.email,
+        company: form.value.company,
+        service: form.value.service,
+        budget: form.value.budget,
+        message: form.value.message
+      }
+    })
     
     // Track successful form submission
     trackFormSubmission('contact_form', true)
@@ -268,12 +279,21 @@ const handleFormSubmit = async () => {
       message: ''
     }
     
-    // Show success message (you can implement a toast notification here)
-    alert('Thank you for your message! We\'ll get back to you within 24 hours.')
+    // Show success message
+    alert(response.message || 'Thank you for your message! We\'ll get back to you within 24 hours.')
   } catch (error) {
     console.error('Form submission error:', error)
     trackFormSubmission('contact_form', false)
-    alert('Sorry, there was an error sending your message. Please try again.')
+    
+    let errorMessage = 'Sorry, there was an error sending your message. Please try again.'
+    if (error && typeof error === 'object') {
+      if (error.data && error.data.message) {
+        errorMessage = error.data.message
+      } else if (error.message) {
+        errorMessage = error.message
+      }
+    }
+    alert(errorMessage)
   } finally {
     isSubmitting.value = false
   }
