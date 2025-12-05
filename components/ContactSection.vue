@@ -173,43 +173,28 @@
                   </div>
                   <div>
                     <h4 class="text-lg font-semibold text-white mb-1 font-display">Email</h4>
-                    <p class="text-gray-300 font-body">hello@fivetwentyfour.com</p>
-                    <p class="text-gray-300 font-body">projects@fivetwentyfour.com</p>
-                  </div>
-                </div>
-                
-                
-                <div class="flex items-start space-x-4">
-                  <div class="flex-shrink-0 w-12 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center">
-                    <svg class="w-6 h-6 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 class="text-lg font-semibold text-white mb-1 font-display">Location</h4>
-                    <p class="text-gray-300 font-body">Los Angeles, CA</p>
+                    <p class="text-gray-300 font-body">hello@fivetwentyfour.studio</p>
                   </div>
                 </div>
               </div>
             </div>
             
-            <!-- Response Time -->
+            <!-- Free Consultation -->
             <div class="bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl p-8 text-white">
-              <h3 class="text-2xl font-semibold mb-4">Quick Response</h3>
-              <p class="text-primary-100 mb-6">
-                We typically respond to all inquiries within 24 hours. For urgent projects, 
-                please mention it in your message and we'll prioritize your request.
+              <h3 class="text-2xl font-semibold mb-4 font-display">Free Consultation</h3>
+              <p class="text-primary-100 mb-6 font-body">
+                Ready to bring your vision to life? Fill out the form and we'll schedule a free consultation 
+                to discuss your project and how we can help you achieve your goals.
               </p>
               <div class="flex items-center space-x-4">
                 <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
                   <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
                 </div>
                 <div>
-                  <div class="text-lg font-semibold">24 Hours</div>
-                  <div class="text-primary-100 text-sm">Average Response Time</div>
+                  <div class="text-lg font-semibold font-display">Let's Talk</div>
+                  <div class="text-primary-100 text-sm font-body">Schedule your free consultation</div>
                 </div>
               </div>
             </div>
