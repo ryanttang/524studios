@@ -19,8 +19,7 @@
           The Work We Do for <span class="text-primary-400">You</span>
         </h2>
         <p class="text-xl text-gray-300 max-w-3xl mx-auto font-body">
-          We specialize in supporting your business with custom web solutions that drive growth, 
-          enhance user experience, and deliver measurable results.
+          Complete brand identity, web design, and SEO for your brand
         </p>
       </div>
       
@@ -134,7 +133,7 @@ const projects = [
   },
   {
     id: 2,
-    name: 'Fashion E-commerce',
+    name: 'E-commerce',
     description: 'Complete e-commerce solution with custom design, payment integration, and inventory management.',
     category: 'E-commerce',
     technologies: ['Vue.js', 'Nuxt', 'Stripe'],
@@ -142,7 +141,7 @@ const projects = [
   },
   {
     id: 3,
-    name: 'Restaurant Branding',
+    name: 'Branding',
     description: 'Complete brand identity and website design for a high-end restaurant chain.',
     category: 'Branding',
     technologies: ['Branding', 'Web Design', 'Photography'],

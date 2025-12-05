@@ -53,9 +53,9 @@
             <a 
               href="#portfolio" 
               class="btn-primary text-lg px-8 py-4"
-              @click="trackButtonClick('View Our Work', 'hero')"
+              @click="trackButtonClick('What We Do', 'hero')"
             >
-            View Our Work
+            What We Do
           </a>
             <a 
               href="#contact" 
