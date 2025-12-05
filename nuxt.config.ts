@@ -113,6 +113,14 @@ export default defineNuxtConfig({
           type: 'text/javascript'
         },
         {
+          src: 'https://www.googletagmanager.com/gtag/js?id=G-7CYXJNLREB',
+          async: true
+        },
+        {
+          innerHTML: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-7CYXJNLREB');`,
+          type: 'text/javascript'
+        },
+        {
           type: 'application/ld+json',
           innerHTML: JSON.stringify({
             '@context': 'https://schema.org',
