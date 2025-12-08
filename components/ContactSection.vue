@@ -42,7 +42,7 @@
                     type="text"
                     required
                     class="w-full px-4 py-3 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md border border-white/20 text-gray-100 placeholder-gray-400 rounded-xl focus:from-white/15 focus:to-white/10 focus:border-primary-400/50 focus:shadow-lg focus:shadow-primary-500/25 font-body"
-                    style="color: #f3f4f6;"
+                    style="color: #f3f4f6; line-height: 1.5; height: auto;"
                     placeholder="Your first name"
                   />
                 </div>
@@ -56,7 +56,7 @@
                     type="text"
                     required
                     class="w-full px-4 py-3 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md border border-white/20 text-gray-100 placeholder-gray-400 rounded-xl focus:from-white/15 focus:to-white/10 focus:border-primary-400/50 focus:shadow-lg focus:shadow-primary-500/25 font-body"
-                    style="color: #f3f4f6;"
+                    style="color: #f3f4f6; line-height: 1.5; height: auto;"
                     placeholder="Your last name"
                   />
                 </div>
@@ -72,7 +72,7 @@
                   type="email"
                   required
                   class="w-full px-4 py-3 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md border border-white/20 text-gray-100 placeholder-gray-400 rounded-xl focus:from-white/15 focus:to-white/10 focus:border-primary-400/50 focus:shadow-lg focus:shadow-primary-500/25 font-body"
-                  style="color: #f3f4f6;"
+                  style="color: #f3f4f6; line-height: 1.5; height: auto;"
                   placeholder="your@email.com"
                 />
               </div>
@@ -86,7 +86,7 @@
                   v-model="form.company"
                   type="text"
                   class="w-full px-4 py-3 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md border border-white/20 text-gray-100 placeholder-gray-400 rounded-xl focus:from-white/15 focus:to-white/10 focus:border-primary-400/50 focus:shadow-lg focus:shadow-primary-500/25 font-body"
-                  style="color: #f3f4f6;"
+                  style="color: #f3f4f6; line-height: 1.5; height: auto;"
                   placeholder="Your company name"
                 />
               </div>
@@ -99,7 +99,7 @@
                   id="service"
                   v-model="form.service"
                   class="w-full px-4 py-3 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md border border-white/20 text-white rounded-xl focus:from-white/15 focus:to-white/10 focus:border-primary-400/50 focus:shadow-lg focus:shadow-primary-500/25 font-body"
-                  style="color: white;"
+                  style="color: white; line-height: 1.5; height: auto;"
                 >
                   <option value="" style="background-color: #1f2937; color: #d1d5db;">Select a service</option>
                   <option value="web-design" style="background-color: #1f2937; color: #ffffff;">Web Design</option>
@@ -120,7 +120,7 @@
                   id="budget"
                   v-model="form.budget"
                   class="w-full px-4 py-3 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md border border-white/20 text-white rounded-xl focus:from-white/15 focus:to-white/10 focus:border-primary-400/50 focus:shadow-lg focus:shadow-primary-500/25 font-body"
-                  style="color: white;"
+                  style="color: white; line-height: 1.5; height: auto;"
                 >
                   <option value="" style="background-color: #1f2937; color: #d1d5db;">Select budget range</option>
                   <option value="under-5k" style="background-color: #1f2937; color: #ffffff;">Under $5,000</option>
@@ -140,8 +140,8 @@
                   v-model="form.message"
                   required
                   rows="6"
-                  class="w-full px-4 py-3 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md border border-white/20 text-gray-100 placeholder-gray-400 rounded-xl focus:from-white/15 focus:to-white/10 focus:border-primary-400/50 focus:shadow-lg focus:shadow-primary-500/25 resize-none font-body"
-                  style="color: #f3f4f6;"
+                  class="w-full px-4 py-3 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md border border-white/20 text-gray-100 placeholder-gray-400 rounded-xl focus:from-white/15 focus:to-white/10 focus:border-primary-400/50 focus:shadow-lg focus:shadow-primary-500/25 font-body"
+                  style="color: #f3f4f6; line-height: 1.5; min-height: 9rem; overflow-y: auto; resize: vertical;"
                   placeholder="Tell us about your project, goals, and any specific requirements..."
                 ></textarea>
               </div>
@@ -340,11 +340,20 @@ onMounted(async () => {
 /* Ensure select dropdowns have visible text */
 select {
   color: #f3f4f6 !important;
+  line-height: 1.5 !important;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  height: auto !important;
+  min-height: 3rem !important;
 }
 
 select option {
   background-color: #1f2937 !important;
   color: #ffffff !important;
+  padding: 0.5rem !important;
+  line-height: 1.5 !important;
 }
 
 select option:first-child {
@@ -353,13 +362,69 @@ select option:first-child {
 
 /* Ensure all form inputs have visible text */
 input[type="text"],
-input[type="email"],
+input[type="email"] {
+  color: #f3f4f6 !important;
+  line-height: 1.5 !important;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  height: auto !important;
+  min-height: 3rem !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  white-space: normal !important;
+  vertical-align: middle !important;
+}
+
+/* Textarea specific styles for better text visibility */
 textarea {
+  color: #f3f4f6 !important;
+  line-height: 1.5 !important;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  min-height: 9rem !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  resize: vertical !important;
+  vertical-align: top !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  white-space: pre-wrap !important;
+  text-align: left !important;
+}
+
+/* Ensure text is visible in all input states */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+  color: #f3f4f6 !important;
+  outline: none !important;
+}
+
+input[type="text"]::value,
+input[type="email"]::value,
+textarea::value {
   color: #f3f4f6 !important;
 }
 
 input::placeholder,
 textarea::placeholder {
   color: #9ca3af !important;
+  opacity: 1 !important;
+}
+
+/* Ensure text is not clipped by container */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  box-sizing: border-box !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
 }
 </style>
