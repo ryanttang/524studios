@@ -25,7 +25,7 @@ export default defineNuxtPlugin(() => {
       
       // Also send to GA4 via gtag if available
       if (window.gtag) {
-        window.gtag('config', 'G-7CYXJNLREB', {
+        window.gtag('config', 'G-D64NZ8LT70', {
           page_title: document.title,
           page_location: window.location.href,
           page_path: to.path

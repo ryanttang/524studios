@@ -113,11 +113,11 @@ export default defineNuxtConfig({
           type: 'text/javascript'
         },
         {
-          src: 'https://www.googletagmanager.com/gtag/js?id=G-7CYXJNLREB',
+          src: 'https://www.googletagmanager.com/gtag/js?id=G-D64NZ8LT70',
           async: true
         },
         {
-          innerHTML: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-7CYXJNLREB');`,
+          innerHTML: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-D64NZ8LT70');`,
           type: 'text/javascript'
         },
         {

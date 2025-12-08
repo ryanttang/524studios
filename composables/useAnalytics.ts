@@ -42,7 +42,7 @@ export const useAnalytics = () => {
       
       // Send to GA4 via gtag
       if (window.gtag) {
-        window.gtag('config', 'G-7CYXJNLREB', {
+        window.gtag('config', 'G-D64NZ8LT70', {
           page_title: pageData.page_title,
           page_location: pageData.page_location,
           page_path: pageData.page_path
