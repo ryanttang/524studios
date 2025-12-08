@@ -41,8 +41,8 @@
                     v-model="form.firstName"
                     type="text"
                     required
-                    class="w-full px-4 py-3 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md border border-white/20 text-gray-100 placeholder-gray-400 rounded-xl focus:from-white/15 focus:to-white/10 focus:border-primary-400/50 focus:shadow-lg focus:shadow-primary-500/25 font-body"
-                    style="color: #f3f4f6; line-height: 1.5; height: auto;"
+                    class="w-full px-4 py-3 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md border border-white/20 placeholder-gray-400 rounded-xl focus:from-white/15 focus:to-white/10 focus:border-primary-400/50 focus:shadow-lg focus:shadow-primary-500/25 font-body"
+                    style="color: #000000; line-height: 1.5; height: auto;"
                     placeholder="Your first name"
                   />
                 </div>
@@ -55,8 +55,8 @@
                     v-model="form.lastName"
                     type="text"
                     required
-                    class="w-full px-4 py-3 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md border border-white/20 text-gray-100 placeholder-gray-400 rounded-xl focus:from-white/15 focus:to-white/10 focus:border-primary-400/50 focus:shadow-lg focus:shadow-primary-500/25 font-body"
-                    style="color: #f3f4f6; line-height: 1.5; height: auto;"
+                    class="w-full px-4 py-3 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md border border-white/20 placeholder-gray-400 rounded-xl focus:from-white/15 focus:to-white/10 focus:border-primary-400/50 focus:shadow-lg focus:shadow-primary-500/25 font-body"
+                    style="color: #000000; line-height: 1.5; height: auto;"
                     placeholder="Your last name"
                   />
                 </div>
@@ -72,7 +72,7 @@
                   type="email"
                   required
                   class="w-full px-4 py-3 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md border border-white/20 text-gray-100 placeholder-gray-400 rounded-xl focus:from-white/15 focus:to-white/10 focus:border-primary-400/50 focus:shadow-lg focus:shadow-primary-500/25 font-body"
-                  style="color: #f3f4f6; line-height: 1.5; height: auto;"
+                  style="color: #000000; line-height: 1.5; height: auto;"
                   placeholder="your@email.com"
                 />
               </div>
@@ -86,7 +86,7 @@
                   v-model="form.company"
                   type="text"
                   class="w-full px-4 py-3 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md border border-white/20 text-gray-100 placeholder-gray-400 rounded-xl focus:from-white/15 focus:to-white/10 focus:border-primary-400/50 focus:shadow-lg focus:shadow-primary-500/25 font-body"
-                  style="color: #f3f4f6; line-height: 1.5; height: auto;"
+                  style="color: #000000; line-height: 1.5; height: auto;"
                   placeholder="Your company name"
                 />
               </div>
@@ -98,17 +98,17 @@
                 <select
                   id="service"
                   v-model="form.service"
-                  class="w-full px-4 py-3 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md border border-white/20 text-white rounded-xl focus:from-white/15 focus:to-white/10 focus:border-primary-400/50 focus:shadow-lg focus:shadow-primary-500/25 font-body"
-                  style="color: white; line-height: 1.5; height: auto;"
+                  class="w-full px-4 py-3 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-xl focus:from-white/15 focus:to-white/10 focus:border-primary-400/50 focus:shadow-lg focus:shadow-primary-500/25 font-body"
+                  style="color: #000000; line-height: 1.5; height: auto;"
                 >
-                  <option value="" style="background-color: #1f2937; color: #d1d5db;">Select a service</option>
-                  <option value="web-design" style="background-color: #1f2937; color: #ffffff;">Web Design</option>
-                  <option value="web-development" style="background-color: #1f2937; color: #ffffff;">Web Development</option>
-                  <option value="e-commerce" style="background-color: #1f2937; color: #ffffff;">E-commerce</option>
-                  <option value="branding" style="background-color: #1f2937; color: #ffffff;">Branding</option>
-                  <option value="consulting" style="background-color: #1f2937; color: #ffffff;">Consulting</option>
-                  <option value="maintenance" style="background-color: #1f2937; color: #ffffff;">Maintenance</option>
-                  <option value="other" style="background-color: #1f2937; color: #ffffff;">Other</option>
+                  <option value="" style="background-color: #ffffff; color: #6b7280;">Select a service</option>
+                  <option value="web-design" style="background-color: #ffffff; color: #000000;">Web Design</option>
+                  <option value="web-development" style="background-color: #ffffff; color: #000000;">Web Development</option>
+                  <option value="e-commerce" style="background-color: #ffffff; color: #000000;">E-commerce</option>
+                  <option value="branding" style="background-color: #ffffff; color: #000000;">Branding</option>
+                  <option value="consulting" style="background-color: #ffffff; color: #000000;">Consulting</option>
+                  <option value="maintenance" style="background-color: #ffffff; color: #000000;">Maintenance</option>
+                  <option value="other" style="background-color: #ffffff; color: #000000;">Other</option>
                 </select>
               </div>
               
@@ -119,15 +119,15 @@
                 <select
                   id="budget"
                   v-model="form.budget"
-                  class="w-full px-4 py-3 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md border border-white/20 text-white rounded-xl focus:from-white/15 focus:to-white/10 focus:border-primary-400/50 focus:shadow-lg focus:shadow-primary-500/25 font-body"
-                  style="color: white; line-height: 1.5; height: auto;"
+                  class="w-full px-4 py-3 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-xl focus:from-white/15 focus:to-white/10 focus:border-primary-400/50 focus:shadow-lg focus:shadow-primary-500/25 font-body"
+                  style="color: #000000; line-height: 1.5; height: auto;"
                 >
-                  <option value="" style="background-color: #1f2937; color: #d1d5db;">Select budget range</option>
-                  <option value="under-5k" style="background-color: #1f2937; color: #ffffff;">Under $5,000</option>
-                  <option value="5k-10k" style="background-color: #1f2937; color: #ffffff;">$5,000 - $10,000</option>
-                  <option value="10k-25k" style="background-color: #1f2937; color: #ffffff;">$10,000 - $25,000</option>
-                  <option value="25k-50k" style="background-color: #1f2937; color: #ffffff;">$25,000 - $50,000</option>
-                  <option value="over-50k" style="background-color: #1f2937; color: #ffffff;">Over $50,000</option>
+                  <option value="" style="background-color: #ffffff; color: #6b7280;">Select budget range</option>
+                  <option value="under-5k" style="background-color: #ffffff; color: #000000;">Under $5,000</option>
+                  <option value="5k-10k" style="background-color: #ffffff; color: #000000;">$5,000 - $10,000</option>
+                  <option value="10k-25k" style="background-color: #ffffff; color: #000000;">$10,000 - $25,000</option>
+                  <option value="25k-50k" style="background-color: #ffffff; color: #000000;">$25,000 - $50,000</option>
+                  <option value="over-50k" style="background-color: #ffffff; color: #000000;">Over $50,000</option>
                 </select>
               </div>
               
@@ -140,8 +140,8 @@
                   v-model="form.message"
                   required
                   rows="6"
-                  class="w-full px-4 py-3 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md border border-white/20 text-gray-100 placeholder-gray-400 rounded-xl focus:from-white/15 focus:to-white/10 focus:border-primary-400/50 focus:shadow-lg focus:shadow-primary-500/25 font-body"
-                  style="color: #f3f4f6; line-height: 1.5; min-height: 9rem; overflow-y: auto; resize: vertical;"
+                  class="w-full px-4 py-3 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md border border-white/20 placeholder-gray-400 rounded-xl focus:from-white/15 focus:to-white/10 focus:border-primary-400/50 focus:shadow-lg focus:shadow-primary-500/25 font-body"
+                  style="color: #000000; line-height: 1.5; min-height: 9rem; overflow-y: auto; resize: vertical;"
                   placeholder="Tell us about your project, goals, and any specific requirements..."
                 ></textarea>
               </div>
@@ -339,7 +339,7 @@ onMounted(async () => {
 <style scoped>
 /* Ensure select dropdowns have visible text */
 select {
-  color: #f3f4f6 !important;
+  color: #000000 !important;
   line-height: 1.5 !important;
   padding-top: 0.75rem !important;
   padding-bottom: 0.75rem !important;
@@ -350,20 +350,20 @@ select {
 }
 
 select option {
-  background-color: #1f2937 !important;
-  color: #ffffff !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
   padding: 0.5rem !important;
   line-height: 1.5 !important;
 }
 
 select option:first-child {
-  color: #d1d5db !important;
+  color: #6b7280 !important;
 }
 
 /* Ensure all form inputs have visible text */
 input[type="text"],
 input[type="email"] {
-  color: #f3f4f6 !important;
+  color: #000000 !important;
   line-height: 1.5 !important;
   padding-top: 0.75rem !important;
   padding-bottom: 0.75rem !important;
@@ -379,7 +379,7 @@ input[type="email"] {
 
 /* Textarea specific styles for better text visibility */
 textarea {
-  color: #f3f4f6 !important;
+  color: #000000 !important;
   line-height: 1.5 !important;
   padding-top: 0.75rem !important;
   padding-bottom: 0.75rem !important;
@@ -401,14 +401,14 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus,
 select:focus {
-  color: #f3f4f6 !important;
+  color: #000000 !important;
   outline: none !important;
 }
 
 input[type="text"]::value,
 input[type="email"]::value,
 textarea::value {
-  color: #f3f4f6 !important;
+  color: #000000 !important;
 }
 
 input::placeholder,
